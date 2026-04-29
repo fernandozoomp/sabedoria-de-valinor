@@ -68,6 +68,12 @@ Avalie cada tema de 1 a 10 considerando:
 | Potencial de polêmica / debate | 15% |
 | Apelo emocional | 15% |
 
+## Output
+
+- Brief diário salvo em `content/briefs/YYYY-MM-DD.md`
+- Mensagem enviada ao Telegram/Discord com ranking de temas
+- Histórico consultável para deduplicação em `content/history/published.json`
+
 ## Regras
 
 - Mínimo 3 temas por brief
