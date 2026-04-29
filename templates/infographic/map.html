@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 1080px;
+            height: 1920px;
+            background: #0D1117;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #F0E6D3;
+            position: relative;
+            overflow: hidden;
+        }
+        .frame {
+            position: absolute;
+            inset: 40px;
+            border: 3px solid #C9A84C;
+            border-radius: 8px;
+        }
+        .corner {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 3px solid #C9A84C;
+        }
+        .corner-tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+        .corner-tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+        .corner-br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+        .title {
+            text-align: center;
+            padding: 80px 60px 40px;
+        }
+        .title h1 {
+            font-size: 56px;
+            color: #C9A84C;
+            text-shadow: 0 2px 10px rgba(201,168,76,0.3);
+            letter-spacing: 3px;
+        }
+        .title .subtitle {
+            font-size: 28px;
+            color: #A8B2C1;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        .map-area {
+            position: absolute;
+            top: 220px;
+            left: 60px;
+            right: 60px;
+            bottom: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .map-content {
+            font-size: 36px;
+            line-height: 1.8;
+            text-align: center;
+            color: #F0E6D3;
+        }
+        .marker {
+            display: inline-block;
+            color: #C9A84C;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 50px;
+            text-align: center;
+            width: 100%;
+        }
+        .footer .brand {
+            font-size: 24px;
+            color: #C9A84C;
+            letter-spacing: 5px;
+        }
+        .divider {
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #C9A84C, transparent);
+            margin: 15px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+    <div class="frame"></div>
+    <div class="title">
+        <h1><!-- MAP_TITLE --></h1>
+        <div class="subtitle"><!-- MAP_SUBTITLE --></div>
+    </div>
+    <div class="map-area">
+        <div class="map-content">
+            <!-- MAP_CONTENT -->
+            <!-- Use .marker spans para pontos de interesse -->
+        </div>
+    </div>
+    <div class="footer">
+        <div class="divider"></div>
+        <div class="brand">🧙 SABEDORIA DE VALINOR</div>
+    </div>
+</body>
+</html>

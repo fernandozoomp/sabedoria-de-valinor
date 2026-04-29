@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 1080px;
+            height: 1920px;
+            background: #0D1117;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #F0E6D3;
+            position: relative;
+            overflow: hidden;
+        }
+        .frame {
+            position: absolute;
+            inset: 40px;
+            border: 3px solid #C9A84C;
+            border-radius: 8px;
+        }
+        .corner { position: absolute; width: 80px; height: 80px; border: 3px solid #C9A84C; }
+        .corner-tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+        .corner-tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+        .corner-br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+        .title {
+            text-align: center;
+            padding: 80px 60px 30px;
+        }
+        .title h1 {
+            font-size: 48px;
+            color: #C9A84C;
+            text-shadow: 0 2px 10px rgba(201,168,76,0.3);
+            letter-spacing: 3px;
+        }
+        .tree {
+            position: absolute;
+            top: 240px;
+            left: 80px;
+            right: 80px;
+            bottom: 160px;
+        }
+        .node {
+            display: inline-block;
+            padding: 15px 25px;
+            background: rgba(30,58,95,0.4);
+            border: 2px solid #C9A84C;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 180px;
+        }
+        .node .icon { font-size: 28px; }
+        .node .name {
+            font-size: 24px;
+            color: #F0E6D3;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .node .title-race {
+            font-size: 18px;
+            color: #A8B2C1;
+            margin-top: 3px;
+        }
+        .node .years {
+            font-size: 16px;
+            color: #C9A84C;
+            margin-top: 2px;
+        }
+        .gen-label {
+            color: #A8B2C1;
+            font-size: 22px;
+            font-style: italic;
+            padding: 15px 0;
+        }
+        .footer {
+            position: absolute;
+            bottom: 50px;
+            text-align: center;
+            width: 100%;
+        }
+        .footer .brand {
+            font-size: 24px;
+            color: #C9A84C;
+            letter-spacing: 5px;
+        }
+        .divider {
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #C9A84C, transparent);
+            margin: 15px auto;
+        }
+        /* Ícones por raça */
+        .icon-elf { color: #C9A84C; }
+        .icon-human { color: #A8B2C1; }
+        .icon-dwarf { color: #B87333; }
+        .icon-hobbit { color: #4CAF50; }
+        .icon-maia { color: #9C27B0; }
+    </style>
+</head>
+<body>
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+    <div class="frame"></div>
+    <div class="title">
+        <h1><!-- GENEALOGY_TITLE --></h1>
+    </div>
+    <div class="tree">
+        <!-- Árvore genealógica aqui -->
+        <!-- Usar .node para cada pessoa, .gen-label para gerações -->
+        <!-- Ícones: .icon-elf ⭐ .icon-human 👤 .icon-dwarf ⛏️ .icon-hobbit 🍃 .icon-maia 🔮 -->
+    </div>
+    <div class="footer">
+        <div class="divider"></div>
+        <div class="brand">🧙 SABEDORIA DE VALINOR</div>
+    </div>
+</body>
+</html>

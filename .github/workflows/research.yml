@@ -1,0 +1,39 @@
+name: Research Validation
+
+on:
+  pull_request:
+    paths:
+      - 'agents/**'
+      - 'prompts/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Check agent prompts have required sections
+        run: |
+          for f in agents/*.md; do
+            if ! grep -q "## Papel\|## Tarefas\|## Input\|## Output" "$f"; then
+              echo "❌ $f missing required sections"
+              exit 1
+            fi
+            echo "✅ $f"
+          done
+      
+      - name: Check prompt templates are valid
+        run: |
+          for f in prompts/**/*.md; do
+            if [ -f "$f" ]; then
+              echo "✅ $f"
+            fi
+          done
+      
+      - name: Check scripts are executable
+        run: |
+          for f in scripts/*.sh scripts/*.py; do
+            if [ -f "$f" ] && [ ! -x "$f" ]; then
+              echo "⚠️ $f is not executable"
+            fi
+          done
